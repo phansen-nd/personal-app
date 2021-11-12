@@ -13,14 +13,13 @@ import com.squareup.picasso.Picasso
 class TripReportAdapter(private val tripReports: List<TripReport>): RecyclerView.Adapter<TripReportAdapter.ViewHolder>() {
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val titleTextView: TextView = view.findViewById(R.id.titleTextView);
-        val blurbTextView: TextView = view.findViewById(R.id.blurbTextView);
-        val dateTextView: TextView = view.findViewById(R.id.dateTextView);
-
+        val titleTextView: TextView = view.findViewById(R.id.titleTextView)
+        val blurbTextView: TextView = view.findViewById(R.id.blurbTextView)
+        val dateTextView: TextView = view.findViewById(R.id.dateTextView)
         val thumbnailImageView: ImageView = view.findViewById(R.id.imageView)
 
         fun updateWithUrl(url: String) {
-            Picasso.get().load(url).into(thumbnailImageView);
+            Picasso.get().load(url).into(thumbnailImageView)
         }
     }
 
@@ -30,14 +29,14 @@ class TripReportAdapter(private val tripReports: List<TripReport>): RecyclerView
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val tr = tripReports[position];
-        holder.titleTextView.text = tr.title;
-        holder.blurbTextView.text = tr.blurb;
-        holder.dateTextView.text = tr.prettyDate;
-        holder.updateWithUrl(tr.thumbnailUrl);
+        val tr = tripReports[position]
+        holder.titleTextView.text = tr.title
+        holder.blurbTextView.text = tr.blurb
+        holder.dateTextView.text = tr.prettyDate
+        holder.updateWithUrl(tr.thumbnailUrl)
     }
 
     override fun getItemCount(): Int {
-        return tripReports.size;
+        return tripReports.size
     }
 }
