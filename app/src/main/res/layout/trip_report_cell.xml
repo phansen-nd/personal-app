@@ -23,8 +23,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHeight_percent="0.3"
         android:fontFamily="@font/nunito"
-        android:textFontWeight="400"
-        />
+        android:textFontWeight="600"
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/blurbTextView"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
         android:fontFamily="@font/nunito"
-        android:textFontWeight="300"/>
+        android:textFontWeight="400"/>
 
     <TextView
         android:id="@+id/dateTextView"

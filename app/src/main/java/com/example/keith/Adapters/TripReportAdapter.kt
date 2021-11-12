@@ -12,7 +12,8 @@ class TripReportAdapter(private val tripReports: List<TripReport>): RecyclerView
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val titleTextView: TextView = view.findViewById(R.id.titleTextView);
-
+        val blurbTextView: TextView = view.findViewById(R.id.blurbTextView);
+        val dateTextView: TextView = view.findViewById(R.id.dateTextView);
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -21,7 +22,10 @@ class TripReportAdapter(private val tripReports: List<TripReport>): RecyclerView
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.titleTextView.text = tripReports[position].title;
+        val tr = tripReports[position];
+        holder.titleTextView.text = tr.title;
+        holder.blurbTextView.text = tr.blurb;
+        holder.dateTextView.text = tr.prettyDate;
     }
 
     override fun getItemCount(): Int {

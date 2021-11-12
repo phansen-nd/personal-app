@@ -32,8 +32,7 @@ public class TripReportsLiveData extends LiveData<List<TripReport>> implements E
             List<TripReport> tripReports = new ArrayList<>();
 
             for (QueryDocumentSnapshot doc : value) {
-                TripReport tr = new TripReport(doc.getString("title"), doc.getString("blurb"));
-
+                TripReport tr = new TripReport(doc.getString("title"), doc.getString("blurb"), doc.getString("dateString"));
                 tripReports.add(tr);
             }
 
