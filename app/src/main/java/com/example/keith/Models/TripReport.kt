@@ -1,4 +1,8 @@
 package com.example.keith.Models
 
-class TripReport(val title: String, val blurb: String, val prettyDate: String) {
+import android.graphics.Bitmap
+
+class TripReport(val title: String, val blurb: String, val prettyDate: String, val thumbnailUrl: String) {
+    lateinit var thumbnail: Bitmap;
+
 }
